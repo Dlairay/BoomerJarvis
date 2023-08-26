@@ -1,0 +1,26 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="static/en.css">
+</head>
+
+<body>
+	<div class="scrolling-image-container">
+		<div class="scrolling-image"><img src="static\pattern.png"></div>
+	</div>
+    <form action="/" method="POST" id="form"> 
+        <label for="question">What's your question?</label><br>
+        <textarea id="question" name="question" rows="4" cols="50" type="text"></textarea>
+        <button type="submit">submit</button>
+    </form>
+    
+    {% if answer %}
+        <h1>{{ qn }}</h1>
+        {% for ans in answer %}
+            <p>{{ ans }}</p><br>
+        {% endfor %}
+    {% endif %}
+ 
+</body>
+
+</html>

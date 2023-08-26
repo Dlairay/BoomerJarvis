@@ -1,0 +1,76 @@
+/*background CSS*/
+
+body {
+	background-color: #EDD5A6; /*chosen in consideration of their eyesight -https://ux.stackexchange.com/questions/83592/studies-on-color-for-the-elderly*/
+}
+
+@keyframes slide {
+	0% {
+		transform: translate(-250px);
+  }
+  100% {
+	  transform: translate(250px); /* The image width */
+  }
+}
+
+.scrolling-image-container {
+	overflow: hidden;
+}
+
+.scrolling-image {
+	height: 100px;
+	width: 4000px;
+	background-image: url("pattern.png"); 
+	background-repeat: repeat-x;
+	animation: slide 5s linear infinite;
+}
+
+/*form CSS*/
+
+#form{
+	position: relative;
+	top: 2.5%;
+	left:2.5%;
+	font-family: "Times New Roman";
+	font-size: 50px;
+	font-weight: bold;
+}
+
+textarea[type=text] {
+	/* try sticky if can*/
+	position: relative;
+	top: 50%; /* for some reason not working */
+	font-size: 40px;
+	width: 1200px;
+	padding: 20px 20px 20px 20px;
+	box-sizing: border-box;
+	border-radius: 10px;
+}
+
+textarea[type=text]:focus {
+  border: 3px solid #555;
+}
+
+button[type="submit"] {
+	font-family: "Times New Roman";
+	font-size: 40px;
+	box-sizing: border-box;
+	border-radius: 10px;
+}
+
+/*answer CSS*/
+h1 {
+	position: relative;
+	left: 2.5%;
+	color: #1A1919;
+	font-family: "Times New Roman";
+	font-size: 40px;
+	font-weight: bold;
+}
+
+p {	
+position: relative;
+	left: 2.5%;
+	font-family: "Times New Roman";
+	font-size: 35px;
+}
